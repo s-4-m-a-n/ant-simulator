@@ -1,0 +1,97 @@
+<!-- =_% -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ant simulation</title>
+	<style type="text/css">
+		*{
+			outline: none;
+		}
+		html,body{
+			width:100%;
+			height: 100%;
+			margin:0;
+			padding: 2%;
+			overflow: hidden;
+		}
+		#canvas{
+		
+			border: 1px solid black;
+			padding: 0;
+			box-shadow: 0 0 5px  gray; 		
+			
+
+		}
+		.container{
+			display:grid;
+			grid-template-columns: 30% auto;
+			grid-template-rows: 100%;
+		}
+
+		.menu{
+			grid-row : 1/2;
+			grid-column: 1/2; 
+		}
+
+		.simScreen{
+			grid-column: 2/3;
+		}
+
+		input[type=button]{
+			padding:2% 4%;
+			background-color:#6E1F95;
+			border:0px;
+			border-radius: 25px;
+			box-shadow: 5px 5px 15px  black; 
+			color:yellow;
+			font-size: 0.7em;	
+			text-align: center;
+			cursor: pointer;
+			transition: .5s;
+	
+		}
+		input[type=button]:active{
+			box-shadow: 0 0 20px #6E1F95;
+			color:#f5fa7a;
+			transform: scale(1.05);
+		}
+		/*input[type=button]:active{
+			transform: scale(1.1);
+
+		}*/
+		h2{
+			 color: gray;
+		}
+		.menu div{
+			width:100%;
+			height:10%;
+
+		}
+
+	</style>
+</head>
+<body>
+	<!-- <canvas id="canvas" width = '500px' height="500px" ></canvas>
+	<input type="button" id="start" value="start" />
+	<input type="button" id="restart" value="restart" /> -->
+	<div class="container">
+		<div class="menu">
+			<div>
+					<input type="button" id="start" value="start" onclick="startSimulation()"/>
+			</div>
+			<div>
+					<input type="button" id="stop" value="stop" onclick="stopSimulation()"/>
+			</div>
+			<div> 
+					<input type="button" id="restart" value="restart" onclick="restartSimulation()"/>
+			</div>
+		</div>
+		<div class="simScreen">
+			<h2>Ant Simulation :</h2>
+			<canvas id="canvas" width = '500px' height="500px" ></canvas>
+		</div>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
